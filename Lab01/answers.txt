@@ -1,5 +1,10 @@
 Ex 2.5.
-Take inputs from user. Convert string inputs to double. Calculate the sum, difference, and product while updating strNotification. Check if num2 equals to 0. If yes, return an error. If not, proceed with division. Update strNotification.
+- Take inputs from user.
+- Convert string inputs to double.
+- Calculate the sum, difference, and product while updating strNotification.
+- Check if num2 equals to 0. If yes, return an error. If not, proceed with division.
+- Update strNotification.
 
 Ex 6.1.
-Customize the options, i.e. only two "Yes", "No" option, with YES_NO_OPTION.
+- Choosing "Cancel" gives the same result as choosing "No".
+- Customize the options, i.e. only two "Yes", "No" option, with YES_NO_OPTION.
