@@ -18,7 +18,15 @@ public class Aims {
 		System.out.println("Total Cost is: ");
 		System.out.println(anOrder.totalCost());
 		
+		DigitalVideoDisc dvd4 = new DigitalVideoDisc("The Hobbit");
+		anOrder.addDigitalVideoDisc(dvd4);
+
 		anOrder.removeDigitalVideoDisc(dvd3);
+		
+		System.out.println("Total Cost is: ");
+		System.out.println(anOrder.totalCost());
+
+		anOrder.removeDigitalVideoDisc(dvd4);
 		
 		System.out.println("Total Cost is: ");
 		System.out.println(anOrder.totalCost());
