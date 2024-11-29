@@ -3,38 +3,14 @@ package hust.soict.dsai.aims.media;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Book {
+public class Book extends Media {
 	
-	private int id;
-	private String title;
-	private String category;
-	private float cost;
 	private List<String> authors = new ArrayList<String>();
 	
 	public Book() {
 		
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public String getCategory() {
-		return category;
-	}
-
-	public float getCost() {
-		return cost;
-	}
-
-	public List<String> getAuthors() {
-		return authors;
-	}
-	
 	public void addAuthor(String authorName) {
 		if (authors.contains(authorName)) {
 			System.out.print("The author is already in the author list.");

@@ -1,7 +1,7 @@
 package hust.soict.dsai.aims.store;
 import java.util.*;
 
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 public class Store {
 	
 	private static ArrayList<DigitalVideoDisc> itemsInStore = new ArrayList<>();
@@ -28,7 +28,7 @@ public class Store {
 		} else {
 			System.out.println("Items in store:");
 			for (int i = 0; i < itemsInStore.size(); i++) {
-				System.out.println(itemsInStore.get(i).getID() + ". " + itemsInStore.get(i));
+				System.out.println(itemsInStore.get(i).getId() + ". " + itemsInStore.get(i));
 			}
 		}
 		System.out.println("***************************************************");
