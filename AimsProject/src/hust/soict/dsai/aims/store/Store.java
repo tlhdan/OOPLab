@@ -10,9 +10,15 @@ public class Store {
 	
 	public void addMedia(Media media) {
 		
-		itemsInStore.add(media);
-		System.out.println("The item has been added.");
-	
+		if (itemsInStore.contains(media)) {
+			
+			System.out.println("The item is already in store.");
+		
+		} else {
+			
+			itemsInStore.add(media);
+			System.out.println("The item has been added.");
+		}
 	}
 	
 	public void removeMedia(Media media) {
@@ -23,9 +29,9 @@ public class Store {
 			System.out.println("The item has been removed.");
 		
 		} else {
+			
 			System.out.println("The item is not in store.");
-		}
-		
+		}	
 	}
 	
 	public void print() {

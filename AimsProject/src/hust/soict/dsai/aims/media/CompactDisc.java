@@ -35,18 +35,26 @@ public class CompactDisc extends Disc implements Playable {
 	}
 
 	public void addTrack(Track track) {
+		
 		if (tracks.contains(track)) {
+			
 			System.out.print("The track is already on the disc.");
+		
 		} else {
+			
 			tracks.add(track);
 			System.out.println("The track has been added.");
 		}
 	}
 	
 	public void removeAuthor(Track track) {
+		
 		if (!tracks.contains(track)) {
+			
 			System.out.println("The track is not on the disc.");
+		
 		} else {
+			
 			tracks.remove(track);
 			System.out.println("The track has been removed.");
 		}
