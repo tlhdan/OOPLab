@@ -13,8 +13,13 @@ public class Cart {
 	public void addMedia(Media media) {
 		
 		if (itemsOrdered.size() >= MAX_NUMBERS_ORDERED) {
+			
 			System.out.println("Not enough space in cart.");
 			
+		} else if (itemsOrdered.contains(media)) {
+			
+			System.out.println("The item is already in cart.");
+		
 		} else {
 			
 			itemsOrdered.add(media);
@@ -27,32 +32,15 @@ public class Cart {
 		
 	}
 	
-	public void addMedia(Media[] mediaList) {
-		
-		if (itemsOrdered.size() + mediaList.length > MAX_NUMBERS_ORDERED) {
-			System.out.println("Not enough space in cart.");
-			
-		} else {
-			
-			for (Media media : mediaList) {
-				itemsOrdered.add(media);
-			}
-			System.out.println("The discs have been added.");
-			
-			if (itemsOrdered.size() == MAX_NUMBERS_ORDERED) {
-				System.out.print(" The cart is almost full.");
-			}
-			
-		}
-	}
-	
 	public void removeMedia(Media media) {
 		
 		if (!itemsOrdered.contains(media)) {
+			
 			itemsOrdered.remove(media);
 			System.out.println("The item has been removed.");
 		
 		} else {
+			
 			System.out.println("The item is not in cart.");
 		}
 	}
@@ -72,6 +60,7 @@ public class Cart {
 		System.out.println("***********************CART***********************");
 		
 		if (itemsOrdered.size() == 0) {
+			
 			System.out.println("The cart is empty.");
 		
 		} else {

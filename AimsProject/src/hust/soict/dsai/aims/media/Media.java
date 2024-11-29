@@ -53,4 +53,16 @@ public abstract class Media {
 		nbMedia += 1;
 		this.id = nbMedia;
 	}
+	
+	public boolean equals(Object o) {
+		
+		if (!(o instanceof Media)) {
+			
+			return false;
+		}
+		
+		Media obj = (Media) o;
+		
+		return this.getTitle().equals(obj.getTitle());
+	}
 }
