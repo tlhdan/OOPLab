@@ -1,5 +1,5 @@
 package hust.soict.dsai.aims.cart;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class Cart {
 	
@@ -115,7 +115,7 @@ public class Cart {
 	public void searchID(int id) {
 		boolean inCart = false;
 		for (int i = 0; i < qtyOrdered; i++) {
-			if (itemsordered[i].getID() == id) {
+			if (itemsordered[i].getId() == id) {
 				System.out.println(itemsordered[i] + " is number " + (i + 1) + " in cart.");
 				inCart = true;
 			}

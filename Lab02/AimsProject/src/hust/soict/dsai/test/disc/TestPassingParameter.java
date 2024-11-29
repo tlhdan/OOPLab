@@ -1,5 +1,5 @@
 package hust.soict.dsai.test.disc;
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class TestPassingParameter {
 
@@ -46,9 +46,9 @@ public class TestPassingParameter {
 		dvd1.setCost(dvd2.getCost());
 		dvd2.setCost(tmpCost);
 		
-		int tmpID = dvd1.getID();
-		dvd1.setID(dvd2.getID());
-		dvd2.setID(tmpID);
+		int tmpID = dvd1.getId();
+		dvd1.setId(dvd2.getId());
+		dvd2.setId(tmpID);
 	}
 	
 	public static void changeTitle(DigitalVideoDisc dvd, String title) {
