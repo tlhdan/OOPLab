@@ -15,7 +15,7 @@ public class Book extends Media {
 		super(title, category, cost);
 	}
 
-	public Book(String title, String category, List<String> authors,float cost) {
+	public Book(String title, String category, List<String> authors, float cost) {
 		super(title, category, cost);
 		this.authors = authors;
 	}
@@ -37,5 +37,24 @@ public class Book extends Media {
 			System.out.println("The author has been removed.");
 		}
 	}
-
+	
+	public String toString() {
+		
+		String str = "Book";
+		if (getTitle() != null) {
+			str += " - " + getTitle();
+		}
+		if (getCategory() != null) {
+			str += " - " + getCategory();
+		}
+		if (authors.size() > 0) {
+			str += " - " + authors.get(0);
+			for (int i = 1; i < authors.size(); i++) {
+				str += ", " + authors.get(i);
+			}
+		}
+		str += ": " + getCost() + " $";
+		
+		return str;
+	}
 }
