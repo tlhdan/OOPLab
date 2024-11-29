@@ -47,7 +47,7 @@ public class CompactDisc extends Disc implements Playable {
 		}
 	}
 	
-	public void removeAuthor(Track track) {
+	public void removeTrack(Track track) {
 		
 		if (!tracks.contains(track)) {
 			
@@ -71,6 +71,24 @@ public class CompactDisc extends Disc implements Playable {
 		return length;
 	}
 
+	public String toString() {
+		
+		String str = "CD";
+		if (getTitle() != null) {
+			str += " - " + getTitle();
+		}
+		if (getCategory() != null) {
+			str += " - " + getCategory();
+		}
+		if (artist != null) {
+			str += " - " + artist;
+		}
+		str += " - " + getLength();
+		str += ": " + getCost() + " $";
+		
+		return str;
+	}
+	
 	@Override
 	public void play() {
 		
