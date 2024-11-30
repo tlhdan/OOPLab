@@ -29,16 +29,11 @@ public class CompactDisc extends Disc implements Playable {
 		this.artist = artist;
 	}
 
-	public CompactDisc(String title, String category, String artist, int length, float cost) {
-		super(title, category, length, cost);
-		this.artist = artist;
-	}
-
 	public void addTrack(Track track) {
 		
 		if (tracks.contains(track)) {
 			
-			System.out.print("The track is already on the disc.");
+			System.out.println("The track is already on the disc.");
 		
 		} else {
 			
@@ -92,7 +87,7 @@ public class CompactDisc extends Disc implements Playable {
 	@Override
 	public void play() {
 		
-		System.out.println("Playing CD: " + this.getTitle());
+		System.out.println("\nPlaying CD: " + this.getTitle());
 		System.out.println("CD length: " + this.getLength());
 		
 		for (Track track : tracks) {
