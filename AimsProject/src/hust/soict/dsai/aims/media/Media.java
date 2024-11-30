@@ -64,6 +64,11 @@ public abstract class Media {
 			return false;
 		}
 		
+		if (!(this.getClass().equals(o.getClass()))) {
+			
+			return false;
+		}
+		
 		Media obj = (Media) o;
 		
 		return this.getTitle().equals(obj.getTitle());

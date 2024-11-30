@@ -1,5 +1,7 @@
 package hust.soict.dsai.test.cart;
 import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.media.Book;
+import hust.soict.dsai.aims.media.CompactDisc;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class CartTest {
@@ -8,15 +10,16 @@ public class CartTest {
 		
 		Cart cart = new Cart();
 		
-		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
-		cart.addMedia(dvd1);
+		CompactDisc cd = new CompactDisc("Supernatural", "K-Pop", "NewJeans", 8.93f);
 		
-		DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars", "Science Fiction", "George Lucas", 87, 24.95f);
-		cart.addMedia(dvd2);
+		DigitalVideoDisc dvd = new DigitalVideoDisc("Supernatural", "Horror", "Eric Kripke", 24.95f);
 		
-		DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin", "Animation", 18.99f);
-		cart.addMedia(dvd3);
-
+		Book book = new Book("The Communist Manifesto", "Philosophy", 4.65f);
+		
+		cart.addMedia(cd);
+		cart.addMedia(dvd);
+		cart.addMedia(book);
+		
 		// Test the print method
 		cart.print();
 		
@@ -24,8 +27,8 @@ public class CartTest {
 		cart.searchId(2);
 		cart.searchId(4);
 		
-		cart.searchTitle("Aladin");
-		cart.searchTitle("Aladdin");
+		cart.searchTitle("The Communist Manifesto");
+		cart.searchTitle("Communist Manifesto");
 	}
 
 }
