@@ -22,7 +22,7 @@ public class Book extends Media {
 	
 	public void addAuthor(String authorName) {
 		if (authors.contains(authorName)) {
-			System.out.print("The author is already in the author list.");
+			System.out.println("The author is already in the author list.");
 		} else {
 			authors.add(authorName);
 			System.out.println("The author has been added.");
