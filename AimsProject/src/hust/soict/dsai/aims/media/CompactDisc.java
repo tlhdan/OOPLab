@@ -55,6 +55,10 @@ public class CompactDisc extends Disc implements Playable {
 		}
 	}
 	
+	public void setArtist(String artist) {
+		this.artist = artist;
+	}
+
 	public int getLength() {
 		
 		int length = 0;
