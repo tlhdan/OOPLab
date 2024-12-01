@@ -10,6 +10,13 @@ public abstract class Media {
 		this.title = title;
 		this.setId();
 	}
+	
+	public Media(String title, String category) {
+		super();
+		this.title = title;
+		this.category = category;
+		this.setId();
+	}
 
 	public Media(String title, String category, float cost) {
 		super();

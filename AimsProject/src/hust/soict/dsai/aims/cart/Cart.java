@@ -10,6 +10,10 @@ public class Cart {
 	
 	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
 	
+	public ArrayList<Media> getItemsOrdered() {
+		return itemsOrdered;
+	}
+
 	public void addMedia(Media media) {
 		
 		if (itemsOrdered.size() >= MAX_NUMBERS_ORDERED) {
