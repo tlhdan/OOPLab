@@ -24,6 +24,14 @@ public class Track implements Playable {
 		this.length = length;
 	}
 	
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public void setLength(int length) {
+		this.length = length;
+	}
+
 	public boolean equals(Object o) {
 		
 		if (!(o instanceof Track)) {
