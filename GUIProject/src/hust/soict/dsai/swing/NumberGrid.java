@@ -57,9 +57,9 @@ public class NumberGrid extends JFrame {
 			if (button.charAt(0) >= '0' && button.charAt(0) <= '9') {
 				tfDisplay.setText(tfDisplay.getText() + button);
 			} else if (button.equals("DEL")) {
-				
+				tfDisplay.setText(tfDisplay.getText().substring(0, tfDisplay.getText().length() - 1));
 			} else {
-				
+				tfDisplay.setText("");
 			}
 		}
 	}
